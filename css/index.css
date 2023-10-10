@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: rgb(240, 240, 240);
+    --accent-color: rgb(190, 49, 68);
+    --background-color: rgb(69, 86, 125);
+    --background-color-alternate: rgb(48, 56, 65);
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.button {
+    background-color: var(--background-color-alternate);
+    border-radius: 2px;
+    padding: 5px 15px;
+    display: inline-block;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 30px;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+}
+
+.button-container {
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    min-height: 71px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 22px;
+    padding: 32px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    background-color: var(--background-color);
+}
+
+.welcome-section {
+    background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome-section h1 {
+    font-size: 60px;
+    color: var(--text-color);
+}
+
+.welcome-section p {
+    font-size: 30px;
+    color: var(--accent-color);
+}
+
+.project-section {
+    background-color: var(--background-color);
+    padding: 100px 20px;
+}
+
+h2 {
+    font-size: 42px;
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 60px;
+}
+
+.project-list {
+    display: grid;
+    gap: 20px;
+}
+
+.project-list article {
+    border: 1px solid var(--background-color);   
+}
+
+.project-list .title-container {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color-alternate);
+    min-height: 80px;
+}
+
+.project-list article h3 {
+    color: var(--text-color);
+    font-size: 30px;
+}
+
+@media (min-width: 731px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1091px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1400px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.contact {
+    min-height: 60vh;
+    background-color: var(--background-color-alternate);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-socials a {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.icon {
+    display: block;
+    width: 40px;
+}
+
+.contact p {
+    font-size: 30px;
+    color: var(--text-color);
+    text-align: center;
+}
